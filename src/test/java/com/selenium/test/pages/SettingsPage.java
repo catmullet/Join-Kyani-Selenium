@@ -29,6 +29,9 @@ public class SettingsPage extends BasePage {
     @FindBy(name = "placement")
     private WebElement placement_field;
 
+    @FindBy(className = "layout__collapse-text")
+    private WebElement viewmore_button;
+
     @FindBy(tagName = "button")
     private WebElement submit_button;
 
@@ -53,6 +56,7 @@ public class SettingsPage extends BasePage {
         phone_field.sendKeys(phone);
         email_field.sendKeys(email);
         sponsor_field.sendKeys(sponsor);
+        viewmore_button.click();
         placement_field.sendKeys(placement);
     }
 
