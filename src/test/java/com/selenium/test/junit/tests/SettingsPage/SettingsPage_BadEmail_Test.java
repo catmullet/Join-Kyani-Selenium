@@ -28,7 +28,7 @@ public class SettingsPage_BadEmail_Test {
     @Test
     public void testBadEmailAddress() {
         SettingsPage settingsPage = new SettingsPage();
-        settingsPage.insertBadEmailFormData();
+        settingsPage.insertFormData("Roberto Gonzalez", "2034852345", "robertogonzalez","50","");
         settingsPage.submitForm();
         assertTrue("Didn't catch bad data", !settingsPage.isPageSubmittedSuccessfully());
     }

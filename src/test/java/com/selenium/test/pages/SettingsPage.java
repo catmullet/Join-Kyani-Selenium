@@ -26,6 +26,9 @@ public class SettingsPage extends BasePage {
     @FindBy(name = "sponsor")
     private WebElement sponsor_field;
 
+    @FindBy(name = "placement")
+    private WebElement placement_field;
+
     @FindBy(tagName = "button")
     private WebElement submit_button;
 
@@ -45,18 +48,12 @@ public class SettingsPage extends BasePage {
         return name_field.isDisplayed();
     }
 
-    public void insertFormData() {
-        name_field.sendKeys("Roberto Gonzalez");
-        phone_field.sendKeys("2083882222");
-        email_field.sendKeys("robertgonzalez@.rgonzalezcorp.com");
-        sponsor_field.sendKeys("50");
-    }
-
-    public void insertBadEmailFormData() {
-        name_field.sendKeys("Roberto Gonzalez");
-        phone_field.sendKeys("2083882222");
-        email_field.sendKeys("robertgonzalez");
-        sponsor_field.sendKeys("50");
+    public void insertFormData(String name, String phone, String email, String sponsor, String placement) {
+        name_field.sendKeys(name);
+        phone_field.sendKeys(phone);
+        email_field.sendKeys(email);
+        sponsor_field.sendKeys(sponsor);
+        placement_field.sendKeys(placement);
     }
 
     public void submitForm() {

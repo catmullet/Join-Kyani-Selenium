@@ -28,7 +28,7 @@ public class SettingsPage_CorrectData_Test {
     @Test
     public void testCorrectFormData() {
         SettingsPage settingsPage = new SettingsPage();
-        settingsPage.insertFormData();
+        settingsPage.insertFormData("Roberto Gonzalez", "2034852345", "robertogonzalez@test.com","50","");
         settingsPage.submitForm();
         assertTrue("Wasn't able to get past settings page with correct info", settingsPage.isPageSubmittedSuccessfully());
     }
