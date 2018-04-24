@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class BadEmailTest {
+public class BadNameTest {
 
     @Rule
     public ScreenShotOnFailRule screenShotOnFailRule = new ScreenShotOnFailRule();
@@ -21,11 +21,11 @@ public class BadEmailTest {
     }
 
     @Test
-    public void testBadEmailAddress() {
+    public void testCorrectFormData() {
         SettingsPage settingsPage = new SettingsPage();
-        settingsPage.insertFormData("Roberto Gonzalez", "2034852345", "robertogonzalez","50","");
+        settingsPage.insertFormData("", "2034852345", "robertogonzalez@test.com","50","");
         settingsPage.submitForm();
-        assertTrue("Didn't validate bad email address", !settingsPage.isPageSubmittedSuccessfully());
+        assertTrue("Didn't validate name", !settingsPage.isPageSubmittedSuccessfully());
     }
 
     @After
