@@ -10,11 +10,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by Sidelnikov Mikhail on 19.09.14.
- * Uses JUnit test framework
- * Test demonstrates work with Page Object Pattern(https://code.google.com/p/selenium/wiki/PageObjects)
- */
 public class SettingsPage_CorrectData_Test {
 
     @Rule

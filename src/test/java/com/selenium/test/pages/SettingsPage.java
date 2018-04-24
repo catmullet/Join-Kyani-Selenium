@@ -4,9 +4,6 @@ import com.selenium.test.webtestsbase.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-/**
- * This page is a page object example.
- */
 public class SettingsPage extends BasePage {
 
     private static final String PAGE_URL = "https://join-staging.kyani.net/settings";
